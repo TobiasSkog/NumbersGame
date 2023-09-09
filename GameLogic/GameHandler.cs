@@ -42,9 +42,11 @@ namespace NumbersGame.GameLogic
             {
                 game.Victory = true;
                 dictionaryChoice = 4;
+                // we recieved the correct guess, returning
+                return;
             }
-            // else if the guess is lower then the value we are looking for...
-            else if (guess < game.MyNumber)
+            // if the guess is lower then the value we are looking for...
+            if (guess < game.MyNumber)
             {
                 // if the guess is 1 or 2 numbers lower than then value we are looking for
                 if (guess - game.MyNumber >= -2 && guess - game.MyNumber < 0)
